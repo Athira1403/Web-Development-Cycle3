@@ -1,0 +1,40 @@
+<html>  
+<head>
+  <h1>ARMSTRONG NUMBER</h1>
+</head>
+<body>  
+<script type="text/javascript"> 
+const num = prompt("Enter a positive integer to check armstong number");
+const noOfDigits = num.length;
+let sum = 0;
+let t = num;
+
+while (t > 0) {
+
+    let remainder = t % 10;
+
+    sum += remainder ** noOfDigits;
+
+    
+    t = parseInt(t / 10); 
+	}
+if( noOfDigits !=4){
+				{
+					window.alert("please enter a valid 4 digit number");
+				}
+
+}
+else{
+     if (sum == num) {
+     document.write("Its is a Armstrong number");
+      }
+    else {
+       alert("Its is not a Armstrong number");
+	   document.write("As the given number is not a Armstrong number");
+
+      } 
+}
+
+</script>  
+<body>  
+</html>

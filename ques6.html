@@ -1,0 +1,66 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>encryption</title>
+    
+  </head>
+  <body>
+    <script  type="text/javascript" >
+	var n = prompt('plaese enter a 4 digit number: ');
+var n1=n;
+var i,temp=0;
+var a=new Array();
+n1=n1.toString();
+
+if(n1.length!= 4)
+	window.alert("enter only 4 digit numbers...");
+else
+{  
+	for(i=0;i<4;i++)
+	{ 
+		a[i]= (parseInt(n[i])+7)%10;
+			}
+
+  temp=a[0];
+  a[0]=a[2];
+  a[2]=temp;
+  temp=a[1];
+  a[1]=a[3];
+  a[3]=temp;
+ 
+  document.write("Encrypted integer is :");
+  for(i=0;i<4;i++)
+	{ 
+       document.write(a[i]);
+	}
+
+
+function decrypt()
+{
+	temp=a[2];
+	a[2]=a[0];
+	a[0]=temp;
+	
+	temp=a[3];
+	a[3]=a[1];
+	a[1]=temp;
+	document.write("Original Integer is :");
+	for(i=0;i<4;i++)
+	{
+		document.write((a[i]+3)%10);
+	}
+	
+
+}
+
+}
+
+	
+	</script>
+	<br><br>
+<button onClick="decrypt()">DECRYPT</button></center>
+	
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Palindrome Number</title>
+	
+	<script type="text/javascript">
+		function palindrome()
+		{
+			var initial = prompt("Please enter a 5 digit ");
+			var palin = new Array();
+			
+			while (initial.length != 5) 
+			{
+				alert("You did not enter a 5 character digit!")
+				initial = prompt("Please enter a 5 digit to check ");
+			} 
+
+			for (var i = 0; i <= initial.length -1; i++) { 
+				palin[i] = initial.charAt(i); 
+			};
+			
+		
+			if (palin[0] == palin[4]) 
+			{ 
+				if (palin[1] == palin[3]) 
+				{
+					document.write("The number entered is  " + initial + ".");
+					document.write("<br>The number is a palindrome")
+				}
+			}
+			else 
+			{
+				document.write("The number entered is " + initial + ".");
+				document.write("<br>The number is NOT a palindrome")
+			};
+
+		}; 
+	</script>
+</head>
+<body>
+	
+	<hr> 
+	<input type = "button" id = "palindrome" value = "Click to check palindrome" onclick = "palindrome();" />
+</body>
+</html>

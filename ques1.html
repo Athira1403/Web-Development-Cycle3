@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>CALCULATOR></title>  
+<body>  
+<script type="text/javascript">  
+  
+ 
+const operator = prompt('Enter the operator you want to perform calculation ( like +, -, * or / ): ');  
+  
+
+const number1 = parseFloat(prompt ('Enter the first number: '));  
+const number2 = parseFloat(prompt ('Enter the second number: '));  
+  
+let value; 
+if (operator == '+') {  
+    value = number1 + number2;  
+}  
+else if (operator == '-') {   
+    value = number1 - number2;  
+}  
+else if (operator == '*') { 
+    value = number1 * number2;  
+}  
+else {  
+    value = number1 / number2;   
+}  
+    
+document.write(" Result is" + value);  
+</script>  
+<body>  
+</html>  
